@@ -9,41 +9,40 @@ Transform lengthy articles and documents into clear, concise, meaningful summari
 
 <br/>
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Framework-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging_Face-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![PyTorch](https://img.shields.io/badge/PyTorch-Deep_Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 
 </div>
 
 ---
+
+## 📌 Overview
+
+Sumi AI is an AI-powered text summarization application that converts lengthy text into shorter, meaningful summaries.
+
+It uses the **DistilBART CNN model** from Hugging Face Transformers to understand input text and generate concise summaries.
+
+Whether you're reading articles, study materials, or lengthy documents, Sumi AI helps you understand the key points faster.
+
+---
+
 ## 🖼️ Application Preview
 
 <div align="center">
 
 ### 🏠 Main Interface
 
-<img src="screenshots/Sumi-AI-Preview.png"
-     alt="Sumi AI Main Interface"
-     width="850"/>
+<img src="screenshots/Sumi-AI-Preview.png" alt="Sumi AI Main Interface" width="850"/>
 
 ### ✨ AI Generated Summary
 
-<img src="screenshots/output.png"
-     alt="Sumi AI Generated Summary"
-     width="850"/>
+<img src="screenshots/output.png" alt="Sumi AI Generated Summary" width="850"/>
 
 **Sumi AI – Less Reading. More Understanding.**
 
 </div>
-
-## 📌 Overview
-
-Sumi AI is an AI-powered text summarization application that converts lengthy text into shorter, meaningful summaries.
-
-It uses the **DistilBART CNN model** from Hugging Face Transformers to understand input text and generate summaries while preserving important information.
-
-Whether you're reading articles, study materials, or lengthy documents, Sumi AI helps you understand the key points faster.
 
 ---
 
@@ -54,14 +53,14 @@ Whether you're reading articles, study materials, or lengthy documents, Sumi AI 
 - 🧩 **Long Text Processing** – Splits lengthy text into manageable chunks.
 - 📊 **Text Analytics** – Displays word and character counts.
 - ⚡ **Processing Time** – Measures summary generation time.
-- 🎨 **Clean UI** – Modern, user-friendly Streamlit interface.
-- 🧹 **Clear Results** – Reset your previous summary easily.
+- 🎨 **Modern UI** – Clean and user-friendly Streamlit interface.
+- 🧹 **Clear Results** – Reset previous summaries easily.
 
 ---
 
 ## 🧠 How Sumi AI Works
 
-The application follows a simple AI summarization pipeline.
+The application follows an AI-powered text summarization pipeline.
 
 ```mermaid
 flowchart TD
@@ -95,7 +94,7 @@ flowchart TD
 |---|---|
 | Python | Core programming language |
 | Streamlit | Interactive web application |
-| Hugging Face Transformers | Pretrained summarization model |
+| Hugging Face Transformers | Pretrained NLP model integration |
 | DistilBART CNN | AI text summarization |
 | PyTorch | Deep learning framework |
 
@@ -105,13 +104,14 @@ flowchart TD
 
 **Model:** `sshleifer/distilbart-cnn-12-6`
 
-DistilBART is a distilled version of BART, designed to provide efficient text summarization.
+DistilBART is a distilled version of BART, designed to perform natural language processing tasks efficiently.
 
-**Key details:**
-- Model source: Hugging Face
-- Task: Abstractive Text Summarization
-- Architecture: Transformer
-- Pretrained on CNN/DailyMail summarization data
+**Model Details:**
+
+- **Model Source:** Hugging Face
+- **Task:** Abstractive Text Summarization
+- **Architecture:** Transformer
+- **Training Dataset:** CNN/DailyMail
 
 The model is downloaded automatically when the application runs for the first time.
 
@@ -122,13 +122,16 @@ The model is downloaded automatically when the application runs for the first ti
 ```text
 AI-Text-Summarizer/
 │
+├── screenshots/
+│   ├── Sumi-AI-Preview.png
+│   └── output.png
+│
 ├── app.py
 ├── summarizer.py
+├── test_model.py
 ├── requirements.txt
 ├── README.md
-│
-└── assets/
-    └── sumi-ai-preview.png
+└── .gitignore
 ```
 
 ---
@@ -173,21 +176,9 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The application will open in your browser.
+The application will automatically open in your browser.
 
----
-
-## 🖼️ Application Preview
-
-Add your application screenshot below:
-
-<div align="center">
-
-<img src="assets/sumi-ai-preview.png" alt="Sumi AI Application Preview" width="850"/>
-
-* Sumi AI – AI-powered text summarization interface *
-
-</div>
+**Note:** The first launch may take some time because the pretrained AI model needs to be downloaded.
 
 ---
 
@@ -195,7 +186,7 @@ Add your application screenshot below:
 
 - 📄 PDF document summarization
 - 🌐 URL and article summarization
-- 🌍 Multilingual summarization
+- 🌍 Multilingual text summarization
 - 📥 Download summaries as TXT or PDF
 - ⚡ Improved processing performance
 
@@ -207,7 +198,7 @@ Through this project, I explored:
 
 - Working with pretrained Transformer models.
 - Understanding abstractive text summarization.
-- Using Hugging Face pipelines.
+- Using Hugging Face Transformers pipelines.
 - Processing long text using tokenization and chunking.
 - Building interactive AI applications with Streamlit.
 - Integrating PyTorch with NLP applications.
